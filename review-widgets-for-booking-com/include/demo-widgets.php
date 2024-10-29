@@ -10,7 +10,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 <strong><?php echo esc_html(__($pluginManager::$widget_templates['templates'][4]['name'], 'trustindex-plugin')); ?></strong>
  (<?php echo esc_html(__($pluginManager::$widget_styles['light-background']['name'], 'trustindex-plugin')); ?>)
 </div>
-<div class="preview"><?php echo $pluginManagerInstance->get_trustindex_widget('61070ea362a62567c4bea3f50'); ?></div>
+<div class="preview"><?php echo $pluginManagerInstance->renderWidgetFrontend('61070ea362a62567c4bea3f50'); ?></div>
 </div>
 </div>
 </div>
@@ -66,7 +66,7 @@ $className = 'ti-half-width';
 <strong><?php echo esc_html(__($template['name'], 'trustindex-plugin')); ?></strong>
  (<?php echo esc_html(__($pluginManager::$widget_styles[ $style ]['name'], 'trustindex-plugin')); ?>)
 </div>
-<div class="preview"><?php echo $pluginManagerInstance->get_noreg_list_reviews(null, true, $layout, $style, true, true, true); ?></div>
+<div class="preview"><?php echo $pluginManagerInstance->renderWidgetAdmin(true, true, ['style-id' => $layout, 'set-id' => $style]); ?></div>
 </div>
 </div>
 </div>
