@@ -9,7 +9,7 @@ Author: Trustindex.io <support@trustindex.io>
 Author URI: https://www.trustindex.io/
 Contributors: trustindex
 License: GPLv2 or later
-Version: 12.4.7
+Version: 12.5
 Text Domain: review-widgets-for-booking-com
 Domain Path: /languages
 Donate link: https://www.trustindex.io/prices/
@@ -20,7 +20,7 @@ Copyright 2019 Trustindex Kft (email: support@trustindex.io)
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 require_once plugin_dir_path(__FILE__) . 'include' . DIRECTORY_SEPARATOR . 'cache-plugin-filters.php';
 require_once plugin_dir_path(__FILE__) . 'trustindex-plugin.class.php';
-$trustindex_pm_booking = new TrustindexPlugin_booking("booking", __FILE__, "12.4.7", "Widgets for Booking.com Reviews", "Booking.com");
+$trustindex_pm_booking = new TrustindexPlugin_booking("booking", __FILE__, "12.5", "Widgets for Booking.com Reviews", "Booking.com");
 $pluginManager = 'TrustindexPlugin_booking';
 $pluginManagerInstance = $trustindex_pm_booking;
 register_activation_hook(__FILE__, [ $pluginManagerInstance, 'activate' ]);
