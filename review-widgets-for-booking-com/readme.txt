@@ -3,7 +3,7 @@ Contributors: trustindex
 Donate link: https://www.trustindex.io/prices/
 Tags: booking.com, reviews, widget, slider, booking reviews
 Tested up to: 6.7
-Stable tag: 12.6.1
+Stable tag: 12.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Plugin Name: Widgets for Booking.com Reviews
@@ -12,7 +12,7 @@ Plugin URI: https://wordpress.org/plugins/review-widgets-for-booking-com/
 Author: Trustindex.io <support@trustindex.io>
 Author URI: https://www.trustindex.io/
 Text Domain: review-widgets-for-booking-com
-Version: 12.6.1
+Version: 12.7
 
 Embed Booking.com reviews fast and easily into your WordPress site. Increase SEO, trust and sales using Booking.com reviews.
 
@@ -52,6 +52,7 @@ To stockpile reviews, what you can do is get the word out that reviews are hugel
 * Filter reviews by rating
 * Display review reply
 * Hide any reviews
+* Anonymize reviewer name
 * Language support
 * Shortcode integration
 * Keep all reviews in a WordPress database
