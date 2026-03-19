@@ -1373,7 +1373,7 @@ $name = sprintf(__('%d hours', 'review-widgets-for-booking-com'), 24);
 <input type="checkbox" name="show-logos" value="1"<?php if ($pluginManagerInstance->getWidgetOption('show-logos')): ?> checked<?php endif;?> />
 <label><?php echo esc_html(__('Show platform logos', 'review-widgets-for-booking-com')); ?></label>
 </span>
-<?php if (!$pluginManagerInstance->is_ten_scale_rating_platform() && $pluginManagerInstance->getShortName() !== 'google'): ?>
+<?php if (!$pluginManagerInstance->is_ten_scale_rating_platform()): ?>
 <span class="ti-checkbox ti-checkbox-row">
 <input type="checkbox" name="show-stars" value="1"<?php if ($pluginManagerInstance->getWidgetOption('show-stars')): ?> checked<?php endif;?> />
 <label><?php echo esc_html(__('Show platform stars', 'review-widgets-for-booking-com')); ?></label>
