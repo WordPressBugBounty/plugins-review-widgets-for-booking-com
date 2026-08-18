@@ -10,7 +10,7 @@ defined('ABSPATH') or die('No script kiddies please!');
 <strong><?php echo esc_html($pluginManager::$widget_templates['templates'][4]['name']); ?></strong>
  (<?php echo esc_html($pluginManager::$widget_styles['light-background']['name']); ?>)
 </div>
-<div class="preview"><?php echo wp_kses($pluginManagerInstance->renderWidgetFrontend('61070ea362a62567c4bea3f50'), $pluginManager::$allowedAttributesForWidget); ?></div>
+<div class="preview"><?php echo wp_kses($pluginManagerInstance->renderWidgetFrontend('61070ea362a62567c4bea3f50', true), $pluginManager::$allowedAttributesForWidget); ?></div>
 </div>
 </div>
 </div>
