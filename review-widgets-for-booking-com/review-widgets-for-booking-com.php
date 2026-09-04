@@ -9,7 +9,7 @@ Author: Trustindex.io <support@trustindex.io>
 Author URI: https://www.trustindex.io/
 Contributors: trustindex
 License: GPLv2 or later
-Version: 14.0
+Version: 14.1
 Requires at least: 6.2
 Requires PHP: 7.4
 Text Domain: review-widgets-for-booking-com
@@ -22,7 +22,7 @@ Copyright 2019 Trustindex Kft (email: support@trustindex.io)
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 require_once plugin_dir_path(__FILE__) . 'include' . DIRECTORY_SEPARATOR . 'cache-plugin-filters.php';
 require_once plugin_dir_path(__FILE__) . 'trustindex-plugin.class.php';
-$trustindex_pm_booking = new TrustindexPlugin_booking("booking", __FILE__, "14.0", "Widgets for Booking.com Reviews", "Booking.com");
+$trustindex_pm_booking = new TrustindexPlugin_booking("booking", __FILE__, "14.1", "Widgets for Booking.com Reviews", "Booking.com");
 $pluginManager = 'TrustindexPlugin_booking';
 $pluginManagerInstance = $trustindex_pm_booking;
 add_action('admin_init', function() { ob_start(); });
@@ -90,9 +90,9 @@ add_action('widgets_init', [ $pluginManagerInstance, 'init_widget' ]);
 add_action('widgets_init', [ $pluginManagerInstance, 'register_widget' ]);
 }
 add_action('init', function() {
-wp_register_script('trustindex-loader-js', 'https://cdn.trustindex.io/loader.js', [], true, [
-'strategy' => 'async',
-'in_footer' => true,
+wp_register_script('trustindex-loader-js', 'https://cdn.trustindex.io/loader.js', [], null, [ // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- The loader URL must not contain cache-busting query parameters.
+'strategy' => is_admin() ? 'defer' : 'async',
+'in_footer' => !is_admin(),
 ]);
 });
 add_action('init', [ $pluginManagerInstance, 'init_shortcode' ]);
